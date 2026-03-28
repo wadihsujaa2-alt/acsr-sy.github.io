@@ -7,112 +7,79 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
         
-        body {
-            font-family: 'Cairo', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f8f9fa;
-            color: #333;
-        }
+        body { font-family: 'Cairo', sans-serif; margin:0; background:#f8f9fa; color:#333; }
         header {
             background: linear-gradient(135deg, #0a2a5e, #1e4a8c);
             color: white;
-            padding: 20px 0;
+            padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 100;
         }
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .logo img {
-            width: 90px;
-            height: 90px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 600;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 70px; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: 600; }
+        
         .hero {
-            background: linear-gradient(rgba(10,42,94,0.85), rgba(30,74,140,0.85)), url('https://via.placeholder.com/1920x600/0a2a5e/ffffff?text=مركز+ACSR') no-repeat center/cover;
+            background: linear-gradient(rgba(10,42,94,0.85), rgba(30,74,140,0.85)), #0a2a5e;
             color: white;
             text-align: center;
-            padding: 120px 20px;
+            padding: 140px 20px 100px;
         }
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-        }
+        .hero h1 { font-size: 2.8rem; margin: 0 0 20px; color: #d4af37; }
+        .hero p { font-size: 1.3rem; max-width: 800px; margin: 0 auto 30px; }
         .btn {
             background: #d4af37;
             color: #0a2a5e;
-            padding: 12px 30px;
+            padding: 14px 35px;
             border: none;
             border-radius: 8px;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: bold;
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
-            margin-top: 20px;
         }
-        section {
-            padding: 80px 5%;
-        }
-        .services {
-            background: white;
-        }
+        section { padding: 80px 5%; }
+        .services { background: white; }
         .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
         }
         .service-card {
             background: #fff;
             border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 30px 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             text-align: center;
-        }
-        .service-card img {
-            width: 60px;
-            margin-bottom: 15px;
         }
         footer {
             background: #0a2a5e;
             color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
         }
         .facebook-btn {
             background: #1877f2;
             color: white;
-            padding: 12px 25px;
+            padding: 14px 30px;
             border-radius: 8px;
             text-decoration: none;
+            font-weight: bold;
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            font-weight: bold;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
 
-    <!-- الهيدر -->
     <header>
-        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+        <div class="container">
             <div class="logo">
-                <!-- ضع رابط صورة اللوغو هنا -->
-                <img src="https://via.placeholder.com/90x90/0a2a5e/d4af37?text=ACSR" alt="شعار ACSR">
-                <div>
-                    <h2 style="margin:0; color:#d4af37;">مركز ACSR</h2>
-                    <p style="margin:0; font-size:0.9rem;">الدراسات الأكاديمية للرسائل والبحوث</p>
-                </div>
+                <img src="https://via.placeholder.com/80x80/0a2a5e/d4af37?text=ACSR" alt="شعار ACSR">
             </div>
             <nav>
                 <a href="#home">الرئيسية</a>
@@ -123,78 +90,50 @@
         </div>
     </header>
 
-    <!-- الصفحة الرئيسية (Hero) -->
     <section id="home" class="hero">
-        <h1>مركز الدراسات الأكاديمية<br>للرسائل والبحوث</h1>
-        <p style="font-size:1.3rem; max-width:800px; margin:0 auto 30px;">
-            ندعم الباحثين والطلاب في إنجاز رسائلهم ومشاريعهم الأكاديمية بأعلى جودة ودقة
-        </p>
+        <h1>مركز الدراسات الأكاديمية</h1>
+        <h2 style="font-size:2.2rem; margin:10px 0 30px;">للرسائل والبحوث</h2>
+        <p>ندعم الباحثين والطلاب في إنجاز رسائلهم ومشاريعهم الأكاديمية بأعلى جودة ودقة</p>
         <a href="#contact" class="btn">تواصل معنا الآن</a>
     </section>
 
-    <!-- عن المركز -->
     <section id="about">
-        <h2 style="text-align:center; color:#0a2a5e; margin-bottom:40px;">عن مركز ACSR</h2>
-        <p style="max-width:900px; margin:0 auto; font-size:1.15rem; line-height:1.8; text-align:center;">
+        <h2 style="text-align:center; color:#0a2a5e;">عن مركز ACSR</h2>
+        <p style="max-width:900px; margin:30px auto; font-size:1.2rem; line-height:1.8; text-align:center;">
             مركز متخصص في تقديم خدمات أكاديمية متكاملة للباحثين والطلاب. 
-            نساعدك في إعداد مشاريع التخرج، تحليل البيانات إحصائياً، تلخيص الدراسات، 
-            ضمان سلامة البحث من الاقتباس، ومتابعة سير البحث حتى النجاح.
+            نساعدك في إعداد مشاريع التخرج، التحليل الإحصائي، تلخيص الدراسات، 
+            فحص الاستلال، ومتابعة سير البحث حتى النجاح.
         </p>
     </section>
 
-    <!-- الخدمات -->
     <section id="services" class="services">
         <h2 style="text-align:center; color:#0a2a5e; margin-bottom:50px;">خدماتنا الأكاديمية</h2>
         <div class="service-grid">
-            <div class="service-card">
-                <h3>إعداد مشاريع التخرج</h3>
-                <p>من الصفر وحتى التسليم النهائي</p>
-            </div>
-            <div class="service-card">
-                <h3>التحليل الإحصائي الدقيق</h3>
-                <p>باستخدام أحدث الأدوات والبرامج</p>
-            </div>
-            <div class="service-card">
-                <h3>تلخيص الدراسات السابقة</h3>
-                <p>مع تحليل شامل وتفسيرات مفهومة</p>
-            </div>
-            <div class="service-card">
-                <h3>فحص نسبة الاستلال (الاقتباس)</h3>
-                <p>ضمان أصالة البحث العلمي</p>
-            </div>
-            <div class="service-card">
-                <h3>تصميم عروض بوربوينت احترافية</h3>
-                <p>عروض تقديمية جذابة</p>
-            </div>
-            <div class="service-card">
-                <h3>توفير المراجع والمصادر</h3>
-                <p>عربية وأجنبية حديثة</p>
-            </div>
+            <div class="service-card"><h3>إعداد مشاريع التخرج</h3><p>من الصفر وحتى التسليم النهائي</p></div>
+            <div class="service-card"><h3>التحليل الإحصائي الدقيق</h3><p>باستخدام أحدث الأدوات</p></div>
+            <div class="service-card"><h3>تلخيص الدراسات السابقة</h3><p>مع تحليل شامل</p></div>
+            <div class="service-card"><h3>فحص نسبة الاستلال</h3><p>ضمان أصالة البحث</p></div>
+            <div class="service-card"><h3>تصميم عروض بوربوينت</h3><p>عروض احترافية جذابة</p></div>
+            <div class="service-card"><h3>توفير المراجع والمصادر</h3><p>عربية وأجنبية حديثة</p></div>
         </div>
     </section>
 
-    <!-- اتصل بنا -->
-    <section id="contact" style="background:#0a2a5e; color:white;">
-        <h2 style="text-align:center; margin-bottom:40px;">اتصل بنا</h2>
-        <div style="max-width:700px; margin:0 auto; text-align:center;">
-            <p style="font-size:1.3rem;">
-                <strong>هاتف:</strong> <a href="tel:+963995559175" style="color:#d4af37;">+963 995 559 175</a>
-            </p>
-            <p style="font-size:1.2rem;">📍 سوريا</p>
-            
-            <a href="https://www.facebook.com/" target="_blank" class="facebook-btn" style="margin:30px 0; display:inline-flex;">
-                👉 زيارة صفحتنا على الفيسبوك
-            </a>
-            
-            <p style="margin-top:30px; font-size:1.1rem;">
-                أرسل لنا رسالة عبر الصفحة أو اتصل مباشرة للحصول على استشارة مجانية
-            </p>
-        </div>
+    <section id="contact" style="background:#0a2a5e; color:white; text-align:center;">
+        <h2>اتصل بنا</h2>
+        <p style="font-size:1.4rem; margin:20px 0;">
+            <strong>📞 هاتف:</strong> <a href="tel:+963995559175" style="color:#d4af37;">+963 995 559 175</a>
+        </p>
+        <p style="font-size:1.2rem;">📍 سوريا</p>
+        
+        <a href="https://www.facebook.com/" target="_blank" class="facebook-btn">
+            👉 زيارة صفحتنا على الفيسبوك
+        </a>
+        
+        <p style="margin-top:40px;">أرسل لنا رسالة عبر الصفحة أو اتصل مباشرة للحصول على استشارة مجانية</p>
     </section>
 
     <footer>
         <p>&copy; 2026 مركز الدراسات الأكاديمية للرسائل والبحوث (ACSR) - جميع الحقوق محفوظة</p>
-        <p>رابط الموقع المستقبلي: www.ACSR-sy.com</p>
     </footer>
 
 </body>
